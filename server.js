@@ -40,6 +40,11 @@ app.get("/", (req, res) => {
     res.send("Express : backend");
 })
 
+app.post("/", (req, res) => {
+    console.log(JSON.stringify(req.body, 0, 2));
+    res.status("200").send(req.body)
+})
+
 app.listen(port, () => {
     console.log(`listening at port ${port}`)
 })
